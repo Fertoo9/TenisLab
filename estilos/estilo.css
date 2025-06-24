@@ -1,0 +1,58 @@
+/* Creamos Selector + propiedad + valor
+
+selector {
+porpiedad: valor
+}
+*/
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    color:whitesmoke;
+    font-size: 50px;
+    margin: 30px;
+    text-align: left;
+}
+
+header {
+    background-color: bisque;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+a {
+    color: rgb(10, 0, 1);
+    text-align: start;
+
+}
+
+h2 {
+    color: rgb(40, 40, 46);
+    font-size: 45px;
+    text-align: center;
+}
+p {
+    color: red;
+    font-family: "Fjalla One", sans-serif;
+
+}
+
+body {
+    background-color: rgb(6, 29, 231);
+}
+
+/* Estilos header */
+
+main div img-novedades{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+
