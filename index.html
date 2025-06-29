@@ -15,31 +15,48 @@
 <body>
     <!--Header encierra el contenido del encabezado del sitio, Titulo, navegacion, redes, carrito, input busqueda. El contenido se repite en todos los archivos html-->
     <header>
-        <h1>TenisLab</h1>
+
+         <div class="buscador">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        
+        <div>
+            <img src="assets/logo-marca.png" alt="logotipo de marca">
+        </div>
+        
+
 
         <!--Nav, encierra el centro de navegacion del sitio, menu de navegacion-->
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="pages/raquetas.html">Raquetas</a></li>
-                <li><a href="pages/pelotas.html">Pelotas</a></li>
-                <li><a href="pages/cuerdas.html">Cuerdas</a></li>
-                <li><a href="pages/calzado.html">Calzado</a></li>
-                <li><a href="pages/indumentaria.html">Indumentaria</a></li>
-            </ul>
-        </nav>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="pages/raquetas.html">Raquetas</a></li>
+                    <li><a href="pages/pelotas.html">Pelotas</a></li>
+                    <li><a href="pages/cuerdas.html">Cuerdas</a></li>
+                    <li><a href="pages/calzado.html">Calzado</a></li>
+                    <li><a href="pages/indumentaria.html">Indumentaria</a></li>
+                </ul>
+            </nav> 
+        </div>
+        
     </header>
 
      <!--Main, encierra contenido principal de un archivo html ( no se repite )-->
     <main>
-        <img src="assets/images.png" alt="Texto descriptivo de la imagen">
-            <!--Section, separa el contenido especifico de un archivo-->
+
+        <div class="img-main">
+            <img src="assets/images.png" alt="Texto descriptivo de la imagen">
+        </div>
+
+<!--Section, separa el contenido especifico de un archivo-->
         <section>
-            <h2>Nuestras Novedades</h2>
+
+            <h1>Nuestras Novedades</h1>
             <div class="img-novedades">
                 <div>
                     <img src="assets/raqueta.png" alt="Raqueta marca Babolar color celeste con detalles en azul oscuro y mango negro">
-                    <h3>Raqueta Pure Drive Gen11</h3>
+                    <h2>Raqueta Pure Drive Gen11</h2>
                     <button>Comprar ahora</button>
 
                 </div>

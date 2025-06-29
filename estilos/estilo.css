@@ -1,38 +1,76 @@
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Creamos Selector + propiedad + valor
 
-selector {
-porpiedad: valor
+  selector {
+  porpiedad: valor
 }
 */
 
 html {
     font-size: 62.5%;
+    background-color: blue;
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color:#F8F7F1;
+    padding: 5px
+    
+}
+
+
+header img{
+    width: 5%;
+    justify-content: start;
+    margin: 5px;
+}
+
+header .buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+header nav ul{
+    background-color:white;
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 150px;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+header nav ul a {
+    width: 5%;
+    color: black;
+    font-family: "Fjalla One", sans-serif;
+
+}
+
+/* Comenzamos a trabajar en nuestro main */
+
+main .img-main{
+    width: 100%;
+    background-color: antiquewhite;
+
 }
 
 h1 {
-    color:whitesmoke;
-    font-size: 50px;
-    margin: 30px;
-    text-align: left;
-}
-
-header {
-    background-color: bisque;
-}
-
-header nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-}
-a {
-    color: rgb(10, 0, 1);
-    text-align: start;
-
-}
-
-h2 {
     color: rgb(40, 40, 46);
     font-size: 45px;
     text-align: center;
@@ -47,12 +85,17 @@ body {
     background-color: rgb(6, 29, 231);
 }
 
-/* Estilos header */
 
-main div img-novedades{
+
+main section div img-novedades{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 
+}
+
+
+footer {
+    background-color: gray;
 }
 
 
