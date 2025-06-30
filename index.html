@@ -43,28 +43,30 @@
     </header>
 
      <!--Main, encierra contenido principal de un archivo html ( no se repite )-->
-    <main>
+    <main class="contenedor">
 
         <div class="img-main">
-            <img src="assets/images.png" alt="Texto descriptivo de la imagen">
+            <img src="assets/bannerdos.png" alt="Banner de descuentos de verano">
         </div>
 
 <!--Section, separa el contenido especifico de un archivo-->
         <section>
 
-            <h1>Nuestras Novedades</h1>
-            <div class="img-novedades">
-                <div>
-                    <img src="assets/raqueta.png" alt="Raqueta marca Babolar color celeste con detalles en azul oscuro y mango negro">
+            <div>
+                <h1>Nuestras Novedades</h1>
+            </div>
+
+            <div class="novedad">
+                <div class="img-novedad">
+                    <img src="assets/raqueta.png" alt="Raqueta marca Babolat color celeste con detalles en azul oscuro y mango negro">
                     <h2>Raqueta Pure Drive Gen11</h2>
-                    <button>Comprar ahora</button>
+                    <button class="btn">Comprar ahora</button>
 
                 </div>
-                <div>
+                <div class="img-novedad">
                     <img src="assets/productos.png" alt="Bolso marca Babolat color azul marino con detalles en color celeste e interior color blanco">
-                    <h3>Productos Destacados</h3>
-                    <button>Ver productos</button>
-
+                    <h2>Productos Destacados</h2>
+                    <button class="btn">Ver productos</button>
                 </div>
             </div>    
         </section>
@@ -72,16 +74,23 @@
 
         <!-- Footer, encierra el contenido de pie de pagina-->
     <footer>
-        <img src="./assets/instagram.png" alt="Logotip instagram">
-        <img src="./assets/facebook.png" alt="Logotipo facebook">
-        <img src="./assets/telegram.png" alt="Logotipo telegram">
 
-        <form action="">
+        <div class="logos-redes">
+            <img src="assets/instagramlogo.png" alt="Logotip instagram">
+            <img src="assets/facebook.png" alt="Logotipo facebook">
+            <img src="assets/telegram.png" alt="Logotipo telegram">
+        </div>
+        <div class="newsletter">
+            <form action="">
             <label for="Newsletter">Suscribite a nuestro Newsletter</label>
             <input type="email">
         </form>
-        
-        <p>2025   © TenisLab. Todos los derechos reservados.</p>
+
+        </div>
+    
+        <div class="copyright">
+            <p>2025   © TenisLab. Todos los derechos reservados.</p>
+        </div>
 
     </footer>
 

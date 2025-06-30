@@ -42,27 +42,50 @@
 
 
     <!--Main, encierra contenido principal de un archivo html ( no se repite )-->
-    <main class="main-raquetas">
+    <main class="contenedor-raquetas">
+      <div class="filtros">
+
+        <div class="filtro-busqueda">
+          <h2>Raquetas</h2>
+          <nav>
+            <ul>
+              <li><a href="#">Profesionales</a></li>
+              <li><a href="#">Intermedios</a></li>
+              <li><a href="#">Junior</a></li>
+              <li><a href="#">Niños</a></li>
+            </ul>
+          </nav>
+        </div>
+
+
+        <aside class="checkbox">
+          <h3>Filtrar por</h3>
+          <h4>Grip</h4>
+          <label><input type="checkbox" /> 4 1/4</label>
+          <label><input type="checkbox" /> 4 3/8</label>
+          <label><input type="checkbox" /> 5</label>
+        </aside>
+
+      </div>
 
       <section class="section-raquetas">
-        <div>
 
-          <img src="../assets/raquetahead.png" alt="Raqueta Head color negro con detalles en rojo y mango negro"> 
+        <div class="rqhead">
+          <img src="../assets/raquetahead.jpg" alt="Raqueta Head color negro con detalles en rojo y mango negro"> 
+          <h3>Información del producto</h3>
+          <p>$$$$$$</p>
+          <button>Agregar</button>        
+        </div>
+
+        <div class="rqwilson">
+          <img src="../assets/raquetawilson.jpg" alt="Raqueta Wilson color celeste tornosolado con mango negro">
           <h3>Información del producto</h3>
           <p>$$$$$$</p>
           <button>Agregar</button>
-        
         </div>
 
-        <div>
-          <img src="../assets/raquetawilson.png" alt="Raqueta Wilson color celeste tornosolado con mango negro">
-          <h3>Información del producto</h3>
-          <p>$$$$$$</p>
-          <button>Agregar</button>
-        </div>
-
-        <div>
-          <img src="../assets/pureaero.png" alt="Raqueta Babolat color amarillo con detalles en color girs y mango blanco">
+        <div class="rqaero">
+          <img src="../assets/raquetaaero.jpg" alt="Raqueta Babolat color amarillo con detalles en color girs y mango blanco">
           <h3>Información del producto</h3>
           <p>$$$$$$</p>
           <button>Agregar</button>
@@ -72,16 +95,23 @@
     </main>
 
     <footer>
-        <img src="../assets/instagram.png" alt="Logotip instagram">
-        <img src="../assets/facebook.png" alt="Logotipo facebook">
-        <img src="../assets/telegram.png" alt="Logotipo telegram">
 
-        <form action="">
+        <div class="logos-redes">
+            <img src="../assets/instagramlogo.png" alt="Logotip instagram">
+            <img src="../assets/facebook.png" alt="Logotipo facebook">
+            <img src="../assets/telegram.png" alt="Logotipo telegram">
+        </div>
+        <div class="newsletter">
+            <form action="">
             <label for="Newsletter">Suscribite a nuestro Newsletter</label>
             <input type="email">
         </form>
-        
-        <p>2025   © TenisLab. Todos los derechos reservados.</p>
+
+        </div>
+    
+        <div class="copyright">
+            <p>2025   © TenisLab. Todos los derechos reservados.</p>
+        </div>
 
     </footer>
   

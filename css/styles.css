@@ -15,9 +15,12 @@
 
 html {
     font-size: 62.5%;
-    background-color: blue;
+    background-color: skyblue
 }
 
+body {
+    background-color: whitesmoke
+}
 
 
 header {
@@ -53,49 +56,243 @@ header nav ul{
     gap: 150px;
     color: antiquewhite;
     text-decoration: none;
+    width: 100%;
 }
 
-header nav ul a {
-    width: 5%;
+header nav ul a{
+    width: 100%;
     color: black;
     font-family: "Fjalla One", sans-serif;
 
 }
 
-/* Comenzamos a trabajar en nuestro main */
+/*   COMENZAMOS A TRABAJAR EN EL MAIN DEL INICIO   */
 
-main .img-main{
+.contenedor {
+    display: flex;
     width: 100%;
-    background-color: antiquewhite;
+    flex-direction: column;
+    justify-content: center;
 
 }
+
+.img-main {
+    display: block;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    background-color: skyblue;
+}
+
+
+
+.novedad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.img-bolso, .img-raqueta {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
 
 h1 {
     color: rgb(40, 40, 46);
     font-size: 45px;
     text-align: center;
 }
-p {
-    color: red;
-    font-family: "Fjalla One", sans-serif;
 
+.btn {
+  background: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-body {
-    background-color: rgb(6, 29, 231);
+
+/*  <-----  COMENZAMOS A TRABAJAR EN EL HTML DE LA SECCION "RAQUETAS" ---->  */
+
+
+.contenedor-raquetas{
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    background-color: skyblue;
+    padding-top: 5px;
+}
+
+.filtros{
+    display: block;
+    flex-direction: column;
+    gap: 5px;
+    background-color: whitesmoke;
+    width: 10%;
+    padding: 10px 0px 0px 15px;
+}
+
+.filtros ul {
+    list-style: none;
+    text-decoration: none;
+    font-size: small;
+    padding: 15px 0px 15px 0px;
 }
 
 
+/**/
 
-main section div img-novedades{
+.checkbox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-items: start;
+}
+
+/*   APLICAMOS GRID PARA INSERTAR NUSTRAS IMAGENES EN COLUMNAS Y LINEAS   */
+
+.section-raquetas{
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-
+    justify-items: stretch;
+    background-color:grey;
+    width: 100%;
+    gap: 1px;
 }
 
+/*   UBICAMOS CADA IMAGEN EN SU POSICION   */
+.rqhead {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2 ;
+    background-color: whitesmoke;
+}
+
+.rqwilson {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: whitesmoke;
+}
+
+.rqaero{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: whitesmoke;
+}
+
+
+/*   <--- TRABAJAMOS EN NUESTRO FOOTER APLICANDO GRID  Y DIMESIONANDO SU CONTENIDO --->   */
 
 footer {
-    background-color: gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: skyblue;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
 }
+
+.logos-redes{
+    margin: 0px 0px 5px 10px;
+}
+
+.newsletter{
+    font-size: large;
+    justify-items: end;
+}
+
+.copyright {
+    grid-column: span 2;
+    justify-items: center;
+    color: black;
+    font-family: "Fjalla One", sans-serif;
+    font-size: small;
+}
+
+
+/*    <----  COMENZAMOS A TRABAJAR CON LA SECCION DE "PELOTAS" DE NUESTRO PROYECTO  ---->    */
+
+.contenedor-pelotas{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1px;
+    background-color: skyblue;
+    padding-top: 5px;
+}
+
+.section-pelotas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    background-color:grey;
+    width: 100%;
+    gap: 1px;
+}
+
+.img-tubo1{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: whitesmoke;
+}
+
+.img-tubo2{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: whitesmoke;
+}
+
+.img-tubo3{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: whitesmoke;
+}
+
+.filtros-pelotas{
+    display: block;
+    grid-row: span 2;
+    width: 10%;
+    background-color: whitesmoke;
+}
+
+.filtro-busqueda{
+    font-size: small;
+    padding: 10px 0px 20px 5px;
+}
+
+.checkbox{
+    font-size: small;
+    padding: 10px 0px 20px 5px;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+
+
 
 
