@@ -1,0 +1,105 @@
+// Import variables 
+@use "../abstracts/variables" as *;
+// Import reset
+@use "../abstracts/mixin" as *;
+
+
+/* Trabajamos en nuestro main de Raquetas */
+
+.contenedor-raquetas{
+    @include flexrow (flex, row, 1px, $color-principal,5px 0px 0px 0px);
+}   
+
+.filtros{
+    .filtro-busqueda{
+        padding-right: 10px;
+    }
+    .checkbox{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-items: start;
+    }
+    @include block;
+    ul{
+        @include ul;
+        a{
+            color: $font-color;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+/* Trabajamos en nuestro section de los productos */
+
+
+.section-raquetas{
+        @include grid(grid, repeat(3, 1fr), repeat(3, 1fr), stretch, 5px);
+        background-color: $color-principal;
+        width: 100%;
+        .infoarticulos{
+            background-color: $second-color;
+            padding: 20px 0px 10px 10px;
+            border-top: solid gray 1px;
+            height: 80px;
+        }
+        .btn{
+            @include button;
+        }
+}
+
+/* Ubicamos cada imagen en su lugar */
+
+.rqhead {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2 ;
+    background-color: $second-color;
+}
+
+.rqwilson {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: $second-color;
+}
+
+.rqaero{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    background-color: $second-color;
+}
+
+.rqtecnifibre{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2 ;
+    background-color: $second-color;
+}
+
+.rqbabolatboost{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3 ;
+    background-color: $second-color;
+}
+
+.rqdunlop{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: $second-color;
+}
+
+.rqheadboom{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    background-color: $second-color;
+}
+
+.rqprince{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: $second-color;
+}
+
+.rqaeroboost{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-color: $second-color;
+}
