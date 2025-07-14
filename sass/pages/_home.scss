@@ -1,0 +1,127 @@
+//Llamado de variables 
+
+@use "../abstracts/variables" as *;
+
+//Llamado mixin
+
+@use "../abstracts/mixin" as *;
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color:#F8F7F1;
+    padding: 5px;
+    margin-bottom: 5px;
+    img{
+        width: 90px;
+        justify-content: start;
+        padding-left: 20px;
+    }
+}
+
+
+header{
+    .buscador{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        font-size: 50px;
+    }
+    input{
+        font-size: 20px;
+    }
+}
+
+header{
+    nav{
+        ul{
+            @include nav;
+            a{
+                width: 100%;
+                color: $font-color;
+                font-family: "Fjalla One", sans-serif;
+            }
+        }
+    }
+}
+
+/*   COMENZAMOS A TRABAJAR EN EL MAIN DEL INICIO   */
+
+.contenedor {
+    @include displaymain(flex, column, center);
+    width: 100%;
+}
+
+.img-main {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 1654px;
+    object-fit: fill;
+}
+
+
+.novedad {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+h1 {
+    color: rgb(40, 40, 46);
+    font-size: 45px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.img-novedad {
+    flex: 1 0 auto;
+    justify-items: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    padding-top: 20px;
+    img{
+        background-color: #F8F7F1;
+    }
+    .btn {
+    @include button;
+    }
+    
+}
+
+
+
+ /* Armamos footer de pagina */
+
+ footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $color-principal;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+    .logos-redes{
+    display: flex;
+    flex-direction: row;;
+    margin: 0px 0px 0px 10px;
+    height: 20px;
+    }
+    .newsletter{
+    font-size: large;
+    justify-items: end;
+    }
+    .copyright {
+    grid-column: span 2;
+    justify-items: center;
+    color: $font-color;
+    font-family: "Fjalla One", sans-serif;
+    font-size: small;
+    }    
+}
+
+
+
+
