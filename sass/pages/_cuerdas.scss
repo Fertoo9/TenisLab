@@ -79,3 +79,181 @@
     grid-row: 2 / 3 ;
     background-color: $second-color;
 }
+
+/* Adaptamos a tablet */
+
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  header img {
+    width: 70px;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  header .buscador {
+    font-size: 30px;
+    padding-top: 10px;
+    flex-direction: column;
+  }
+
+  header input {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  header nav ul {
+    gap: 40px;
+    font-size: 120%;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+
+  .contenedor-cuerdas {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .contenedor-cuerdas .filtros-cuerdas {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contenedor-cuerdas .filtros-cuerdas h2 {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+
+  .contenedor-cuerdas .checkboxs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .contenedor-cuerdas .checkboxs h3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contenedor-cuerdas .checkboxs .filtroaside {
+    margin-top: 15px;
+  }
+
+  .contenedor-cuerdas .checkboxs .filtroaside label {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .section-cuerdas {
+    grid-template-columns: repeat(2, 1fr); /* De 3 columnas a 2 */
+    grid-template-rows: auto;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .section-cuerdas .infoarticulos {
+    padding: 10px;
+    height: auto;
+    font-size: 14px;
+  }
+
+  .section-cuerdas .btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+}
+
+/* Adaptamos a mobile */
+
+
+@media (max-width: 768px) {
+  body {
+    background-color: skyblue;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  header img {
+    width: 60px;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  header .buscador {
+    font-size: 24px;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  header input {
+    font-size: 16px;
+    width: 80%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 120%;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  header nav ul a {
+    text-align: center;
+    display: block;
+  }
+
+  .contenedor-cuerdas {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* Ocultamos los filtros en pantallas móviles */
+  .contenedor-cuerdas .filtros-cuerdas {
+    display: none;
+  }
+
+  .section-cuerdas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .section-cuerdas .infoarticulos {
+    padding: 10px;
+    height: auto;
+    font-size: 14px;
+  }
+
+  .section-cuerdas .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .img-cuerda1,
+  .img-cuerda2,
+  .img-cuerda3,
+  .img-cuerda4,
+  .img-cuerda5 {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+  }
+}
+
