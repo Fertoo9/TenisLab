@@ -62,11 +62,14 @@ header nav ul a {
 }
 
 .img-main {
+  display: flex;
+  width: 100%;
+}
+.img-main img {
   display: block;
-  max-width: 100%;
-  height: auto;
-  width: 1654px;
-  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .novedad {
@@ -89,6 +92,8 @@ h1 {
   width: 400px;
   height: 400px;
   padding-top: 20px;
+  margin: 2px;
+  border: 0.5px solid #e0e0e0;
 }
 .img-novedad img {
   background-color: #F8F7F1;
@@ -199,40 +204,56 @@ footer .copyright {
     padding: 0;
   }
   header {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    width: 100%;
+    background-color: #F8F7F1;
+    padding: 5px;
+    margin-bottom: 5px;
   }
   header img {
-    width: 60px;
-    padding-left: 0;
-    margin-bottom: 10px;
+    width: 90px;
+    padding-left: 20px;
   }
   header .buscador {
-    font-size: 24px;
-    padding-top: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 50px;
   }
-  header input {
-    font-size: 16px;
-    width: 80%;
+  header .buscador input {
+    font-size: 20px;
   }
   header nav ul {
-    flex-direction: column;
-    gap: 10px;
-    font-size: 120%;
-    padding: 0;
-    margin: 10px 0;
+    background-color: white;
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 150px;
+    color: antiquewhite;
+    text-decoration: none;
+    width: 100%;
   }
   header nav ul a {
-    text-align: center;
-    display: block;
+    width: 100%;
+    color: black;
+    font-family: "Fjalla One", sans-serif;
   }
   .contenedor {
     padding: 10px;
   }
   .img-main {
-    display: none;
+    display: block;
+    margin-left: -10px;
+    margin-right: -10px;
+    width: calc(100% + 20px);
+  }
+  img-main img {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
   .novedad {
     flex-direction: column;
@@ -242,6 +263,8 @@ footer .copyright {
     width: 100%;
     height: auto;
     padding-top: 10px;
+    margin: 1px;
+    border: solid 0.5px #ccc;
   }
   h1 {
     font-size: 28px;
@@ -492,8 +515,7 @@ footer .copyright {
     flex-direction: column;
     padding: 5px;
   }
-  /* Ocultar filtros en móviles */
-  .filtros {
+  .contenedor-raquetas .filtros {
     display: none;
   }
   .section-raquetas {
@@ -652,7 +674,7 @@ footer .copyright {
     padding: 10px 0px;
     font-size: 18px;
   }
-  .contenedor-pelotas .filtros-pelotas .checkbox {
+  .contenedor-pelotas .filtros-pelotas h2 .checkbox {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
@@ -714,7 +736,6 @@ footer .copyright {
     flex-direction: column;
     padding: 10px;
   }
-  /* Ocultamos filtros para simplificar en móvil */
   .contenedor-pelotas .filtros-pelotas {
     display: none;
   }
@@ -951,7 +972,6 @@ footer .copyright {
     flex-direction: column;
     padding: 10px;
   }
-  /* Ocultamos los filtros en pantallas móviles */
   .contenedor-cuerdas .filtros-cuerdas {
     display: none;
   }
@@ -1134,7 +1154,7 @@ footer .copyright {
     padding-top: 10px;
     flex-direction: column;
   }
-  header input {
+  header .buscador input {
     width: 80%;
     font-size: 16px;
   }
@@ -1234,38 +1254,6 @@ footer .copyright {
     text-align: center;
     display: block;
   }
-  .contenedor-cuerdas {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .contenedor-cuerdas .filtros-cuerdas {
-    display: none;
-  }
-  .section-cuerdas {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  .section-cuerdas .infoarticulos {
-    padding: 10px;
-    height: auto;
-    font-size: 14px;
-  }
-  .section-cuerdas .btn {
-    padding: 8px 12px;
-    font-size: 12px;
-    margin-top: 8px;
-  }
-  .img-cuerda1,
-  .img-cuerda2,
-  .img-cuerda3,
-  .img-cuerda4,
-  .img-cuerda5 {
-    grid-column: auto;
-    grid-row: auto;
-    width: 100%;
-  }
   /* Sección CALZADO */
   .contenedor-calzado {
     flex-direction: column;
@@ -1308,6 +1296,241 @@ footer .copyright {
     max-width: 100%;
     height: auto;
     display: block;
+  }
+}
+/* Trabajamos en nuestro main de Indumentaria */
+.contenedor-indumentaria {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  background-color: skyblue;
+  padding: 10px 0px 0px 0px;
+}
+.contenedor-indumentaria .filtros-indumentaria {
+  background-color: whitesmoke;
+}
+.contenedor-indumentaria .filtros-indumentaria h2 {
+  padding: 20px 40px 20px 10px;
+}
+.contenedor-indumentaria .filtros-indumentaria .checkboxs {
+  gap: 20px;
+  justify-items: start;
+  padding: 20px 10px 30px 10px;
+}
+.contenedor-indumentaria .filtros-indumentaria .checkboxs h3 {
+  margin-bottom: 20px;
+}
+.contenedor-indumentaria .filtros-indumentaria .checkboxs .filtroaside {
+  margin-top: 30px;
+}
+.contenedor-indumentaria .filtros-indumentaria .checkboxs .filtroaside label {
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  font-size: small;
+  padding: 15px 0px 5px 0px;
+  margin-right: 5px;
+}
+
+/* Trabajamos en nuestra seccion lateral */
+.section-indumentaria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: stretch;
+  gap: 5px;
+  background-color: skyblue;
+  width: 100%;
+}
+.section-indumentaria .infoarticulos {
+  background-color: whitesmoke;
+  padding: 20px 0px 10px 10px;
+  border-top: solid gray 1px;
+  height: 80px;
+}
+.section-indumentaria .btn {
+  background: black;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 5px;
+}
+
+/* Ubicamos cada imagen en su lugar */
+.img-indumentaria1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: whitesmoke;
+}
+
+.img-indumentaria2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background-color: whitesmoke;
+}
+
+.img-indumentaria3 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-color: whitesmoke;
+}
+
+.img-indumentaria4 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: whitesmoke;
+}
+
+.img-indumentaria5 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: whitesmoke;
+}
+
+/* Adaptamos para tablet  */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  header img {
+    width: 70px;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+  header .buscador {
+    font-size: 30px;
+    padding-top: 10px;
+    flex-direction: column;
+  }
+  header input {
+    width: 80%;
+    font-size: 16px;
+  }
+  header nav ul {
+    gap: 40px;
+    font-size: 120%;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  .contenedor-indumentaria {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .contenedor-indumentaria .filtros-indumentaria {
+    width: 100%;
+    padding: 10px;
+  }
+  .contenedor-indumentaria .filtros-indumentaria h2 {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+  .contenedor-indumentaria .checkboxs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+  .contenedor-indumentaria .checkboxs h3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .contenedor-indumentaria .checkboxs .filtroaside {
+    margin-top: 15px;
+  }
+  .contenedor-indumentaria .checkboxs .filtroaside label {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .section-indumentaria {
+    grid-template-columns: repeat(2, 1fr); /* De 3 columnas a 2 */
+    grid-template-rows: auto;
+    gap: 10px;
+    width: 100%;
+  }
+  .section-indumentaria .infoarticulos {
+    padding: 10px;
+    height: auto;
+    font-size: 14px;
+  }
+  .section-indumentaria .btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+/* Adaptamos a mobile */
+@media (max-width: 768px) {
+  body {
+    background-color: skyblue;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  header img {
+    width: 60px;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+  header .buscador {
+    font-size: 24px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  header input {
+    font-size: 16px;
+    width: 80%;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 120%;
+    padding: 0;
+    margin: 10px 0;
+  }
+  header nav ul a {
+    text-align: center;
+    display: block;
+  }
+  .contenedor-indumentaria {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .contenedor-indumentaria .filtros-indumentaria {
+    display: none;
+  }
+  .section-indumentaria {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .section-indumentaria .infoarticulos {
+    padding: 10px;
+    height: auto;
+    font-size: 14px;
+  }
+  .section-indumentaria .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .img-indumentaria1,
+  .img-indumentaria2,
+  .img-indumentaria3,
+  .img-indumentaria4,
+  .img-indumentaria5 {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
   }
 }
 

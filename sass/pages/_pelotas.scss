@@ -86,71 +86,64 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    img{
+      width: 70px;
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+    .buscador{
+      font-size: 30px;
+      padding-top: 10px;
+      flex-direction: column;
+    }
+    input{
+      width: 80%;
+      font-size: 16px;
+    }
+    nav{
+      ul{
+        gap: 40px;
+        font-size: 120%;
+        flex-wrap: wrap;
+        padding: 10px 0;
+      }
+    }
   }
 
-  header img {
-    width: 70px;
-    padding-left: 0;
-    margin-bottom: 10px;
-  }
-
-  header .buscador {
-    font-size: 30px;
-    padding-top: 10px;
-    flex-direction: column;
-  }
-
-  header input {
-    width: 80%;
-    font-size: 16px;
-  }
-
-  header nav ul {
-    gap: 40px;
-    font-size: 120%;
-    flex-wrap: wrap;
-    padding: 10px 0;
-  }
 
   .contenedor-pelotas {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-  }
-
-  .contenedor-pelotas .filtros-pelotas {
-    width: 100%;
-    padding: 10px 15px;
-  }
-
-  .contenedor-pelotas .filtros-pelotas h2 {
-    padding: 10px 0px;
-    font-size: 18px;
-  }
-
-  .contenedor-pelotas .filtros-pelotas .checkbox {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 0px;
+    .filtros-pelotas{
+      width: 100%;
+      padding: 10px 15px;
+      h2{
+        padding: 10px 0px;
+        font-size: 18px;
+        .checkbox{
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 10px;
+          padding: 10px 0px;
+        }
+      }
+    }
   }
 
   .section-pelotas {
     grid-template-columns: repeat(2, 1fr); /* De 3 a 2 columnas */
     grid-template-rows: auto;
     gap: 10px;
-  }
-
-
-  .section-pelotas .infoarticulos {
-    padding: 10px;
-    height: auto;
-    font-size: 14px;
-  }
-
-  .section-pelotas .btn {
-    padding: 8px 12px;
-    font-size: 12px;
+    .infoarticulos{
+      padding: 10px;
+      height: auto;
+      font-size: 14px;
+    }
+    .btn{
+      padding: 8px 12px;
+      font-size: 12px;
+    }
   }
 }
 
@@ -169,67 +162,62 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    img{
+      width: 60px;
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+    .buscador{
+      font-size: 24px;
+      padding-top: 10px;
+      text-align: center;
+    }
+    input{
+      font-size: 16px;
+      width: 80%;
+    }
+    nav{
+      ul{
+        flex-direction: column;
+        gap: 10px;
+        font-size: 120%;
+        padding: 0;
+        margin: 10px 0;
+        a{
+          text-align: center;
+          display: block;
+        }
+      }
+    }
   }
-
-  header img {
-    width: 60px;
-    padding-left: 0;
-    margin-bottom: 10px;
-  }
-
-  header .buscador {
-    font-size: 24px;
-    padding-top: 10px;
-    text-align: center;
-  }
-
-  header input {
-    font-size: 16px;
-    width: 80%;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 10px;
-    font-size: 120%;
-    padding: 0;
-    margin: 10px 0;
-  }
-
-  header nav ul a {
-    text-align: center;
-    display: block;
-  }
+  
 
    .contenedor-pelotas {
     flex-direction: column;
     padding: 10px;
+    .filtros-pelotas{
+      display: none;
+    }
   }
 
-  /* Ocultamos filtros para simplificar en móvil */
-  .contenedor-pelotas .filtros-pelotas {
-    display: none;
-  }
 
   .section-pelotas {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    .infoarticulos{
+      padding: 10px;
+      height: auto;
+      font-size: 14px;
+    }
+    .btn{
+      padding: 8px 12px;
+      font-size: 12px;
+      margin-top: 8px;
+    }
   }
-
-  .section-pelotas .infoarticulos {
-    padding: 10px;
-    height: auto;
-    font-size: 14px;
-  }
-
-  .section-pelotas .btn {
-    padding: 8px 12px;
-    font-size: 12px;
-    margin-top: 8px;
-  }
-
+  
   .img-tubo1,
   .img-tubo2,
   .img-tubo3,

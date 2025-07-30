@@ -3,12 +3,11 @@
 // Import reset
 @use "../abstracts/mixin" as *;
 
-/* Comenzamos a trabajar en el main de el html cuerdas  */
-   
+/* Trabajamos en nuestro main de Indumentaria */
 
-.contenedor-cuerdas{
+.contenedor-indumentaria{
     @include flexrow (flex, row, 5px, $color-principal, 10px 0px 0px 0px);
-    .filtros-cuerdas{
+    .filtros-indumentaria{
         background-color: $second-color;
         h2{
             padding: 20px 40px 20px 10px;
@@ -33,7 +32,7 @@
 /* Trabajamos en nuestra seccion lateral */
 
 
-.section-cuerdas{
+.section-indumentaria {
         @include grid(grid, repeat(3, 1fr), repeat(2, 1fr), stretch, 5px);
         background-color: $color-principal;
         width: 100%;
@@ -50,37 +49,37 @@
 
 /* Ubicamos cada imagen en su lugar */
 
-.img-cuerda1 {
+.img-indumentaria1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2 ;
     background-color: $second-color;
 }
 
-.img-cuerda2 {
+.img-indumentaria2 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     background-color: $second-color;
 }
 
-.img-cuerda3{
+.img-indumentaria3{
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     background-color: $second-color;
 }
 
-.img-cuerda4{
+.img-indumentaria4{
     grid-column: 1 / 2;
     grid-row: 2 / 3 ;
     background-color: $second-color;
 }
 
-.img-cuerda5{
+.img-indumentaria5{
     grid-column: 2 / 3;
     grid-row: 2 / 3 ;
     background-color: $second-color;
 }
 
-/* Adaptamos a tablet */
+/* Adaptamos para tablet  */
 
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -89,75 +88,74 @@
     align-items: center;
     padding: 10px;
     img{
-      width: 70px;
-      padding-left: 0;
-      margin-bottom: 10px;
+        width: 70px;
+        padding-left: 0;
+        margin-bottom: 10px;
     }
     .buscador{
-      font-size: 30px;
-      padding-top: 10px;
-      flex-direction: column;
+        font-size: 30px;
+        padding-top: 10px;
+        flex-direction: column;
     }
     input{
-      width: 80%;
-      font-size: 16px;
+        width: 80%;
+        font-size: 16px;
     }
     nav{
-      ul{
-        gap: 40px;
-        font-size: 120%;
-        flex-wrap: wrap;
-        padding: 10px 0;
-      }
+        ul{
+            gap: 40px;
+            font-size: 120%;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
     }
   }
 
-
-  .contenedor-cuerdas {
+  .contenedor-indumentaria {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    .filtros-cuerdas{
-      width: 100%;
-      padding: 10px;
-      h2{
-        padding: 10px 0;
-        font-size: 20px;
-      }
+    .filtros-indumentaria{
+        width: 100%;
+        padding: 10px;
+        h2{
+            padding: 10px 0;
+            font-size: 20px;
+        }
     }
     .checkboxs{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 10px;
-      h3{
-        width: 100%;
-        margin-bottom: 10px;
-      }
-      .filtroaside{
-        margin-top: 15px;
-        label{
-          font-size: 14px;
-          padding: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+        h3{
+            width: 100%;
+            margin-bottom: 10px;
         }
-      }
+        .filtroaside{
+            margin-top: 15px;
+            label{
+                font-size: 14px;
+                padding: 10px 0;
+            }
+        }
     }
   }
 
 
-  .section-cuerdas {
+  .section-indumentaria {
     grid-template-columns: repeat(2, 1fr); /* De 3 columnas a 2 */
     grid-template-rows: auto;
     gap: 10px;
     width: 100%;
     .infoarticulos{
-      padding: 10px;
-      height: auto;
-      font-size: 14px;
+        padding: 10px;
+        height: auto;
+        font-size: 14px;
     }
     .btn{
-      padding: 8px 14px;
-      font-size: 12px;
+        padding: 8px 14px;
+        font-size: 12px;
     }
   }
 }
@@ -177,69 +175,68 @@
     align-items: center;
     padding: 10px;
     img{
-      width: 60px;
-      padding-left: 0;
-      margin-bottom: 10px;
+        width: 60px;
+        padding-left: 0;
+        margin-bottom: 10px;
     }
     .buscador{
-      font-size: 24px;
-      padding-top: 10px;
-      text-align: center;
+        font-size: 24px;
+        padding-top: 10px;
+        text-align: center;
     }
     input{
-      font-size: 16px;
-      width: 80%;
+        font-size: 16px;
+        width: 80%;
     }
     nav{
-      ul{
-        flex-direction: column;
-        gap: 10px;
-        font-size: 120%;
-        padding: 0;
-        margin: 10px 0;
-        a{
-          text-align: center;
-          display: block;
+        ul{
+            flex-direction: column;
+            gap: 10px;
+            font-size: 120%;
+            padding: 0;
+            margin: 10px 0;
+            a{
+                text-align: center;
+                display: block;
+            }
         }
-      }
     }
   }
 
-
-  .contenedor-cuerdas {
+  .contenedor-indumentaria {
     flex-direction: column;
     padding: 10px;
-    .filtros-cuerdas{
-      display: none;
+    .filtros-indumentaria{
+        display: none;
     }
   }
 
-  .section-cuerdas {
+
+  .section-indumentaria {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
     .infoarticulos{
-      padding: 10px;
-      height: auto;
-      font-size: 14px;
+        padding: 10px;
+        height: auto;
+        font-size: 14px;
     }
     .btn{
-      padding: 8px 12px;
-      font-size: 12px;
-      margin-top: 8px;
+        padding: 8px 12px;
+        font-size: 12px;
+        margin-top: 8px;
     }
   }
 
 
-  .img-cuerda1,
-  .img-cuerda2,
-  .img-cuerda3,
-  .img-cuerda4,
-  .img-cuerda5 {
+  .img-indumentaria1,
+  .img-indumentaria2,
+  .img-indumentaria3,
+  .img-indumentaria4,
+  .img-indumentaria5 {
     grid-column: auto;
     grid-row: auto;
     width: 100%;
   }
 }
-
